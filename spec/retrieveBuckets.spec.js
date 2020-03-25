@@ -9,7 +9,7 @@ const logger = require('@elastic.io/component-logger')();
 const action = require('../lib/actions/retrieveBuckets');
 
 const cfg = {
-  resourceServerUrl: 'http://example.com',
+  resourceServerUrl: 'http://maester-service.platform.svc.cluster.local:3002',
   apiKeyHeaderValue: 'token',
 };
 
