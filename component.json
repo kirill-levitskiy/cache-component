@@ -1,0 +1,78 @@
+{
+  "title": "Cache Component",
+  "description": "Component to store and retrieve value from key:value storage",
+  "docsUrl": "",
+  "actions": {
+    "StoreKeyValue": {
+      "main": "./lib/actions/store.js",
+      "title": "Upsert Key:Value pair",
+      "description": "Insert new or update existing Key:Value pair",
+      "fields": {
+        "updateIfExists": {
+          "viewClass": "CheckBoxView",
+          "label": "Update if exists"}
+      },
+      "metadata": {
+        "in": "./lib/schemas/store.in.json"
+      }
+    },
+    "StoreKeyValueBatch": {
+      "main": "./lib/actions/storeBatch.js",
+      "title": "Upsert Key:Value pair Batch",
+      "description": "Insert new or replace existing Key:Value pair from Batch",
+      "fields": {
+        "updateIfExists": {
+          "viewClass": "CheckBoxView",
+          "label": "Update if exists"
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/storeBatch.in.json"
+      }
+    },
+    "RetrieveKeyValue": {
+      "main": "./lib/actions/retrieve.js",
+      "title": "Lookup Key:Value pair",
+      "description": "Retrieve existing Key:Value pair by Key",
+      "fields": {
+        "default": {
+          "viewClass": "TextFieldView",
+          "label": "Default value if key was not found",
+          "required": false
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/retrieve.in.json"
+      }
+    },
+    "RetrieveKeyValueBatch": {
+      "main": "./lib/actions/retrieveBatch.js",
+      "title": "Lookup Key:Value pair Batch",
+      "description": "Retrieve existing Key:Value pair by Key Batch",
+      "fields": {
+        "default": {
+          "viewClass": "TextFieldView",
+          "label": "Default value if key was not found",
+          "required": false
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/retrieveBatch.in.json"
+      }
+    },
+    "RemoveKeyValue": {
+      "main": "./lib/actions/remove.js",
+      "title": "Delete Key:Value pair",
+      "description": "Remove existing Key:Value pair by Key",
+      "fields": {
+        "allValues": {
+          "viewClass": "CheckBoxView",
+          "label": "Delete all values for this key"
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/remove.in.json"
+      }
+    }
+  }
+}

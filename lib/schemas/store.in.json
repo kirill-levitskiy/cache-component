@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "key": {
+      "name": "Key",
+      "type": "string",
+      "required": false
+    },
+    "value": {
+      "name": "Value",
+      "type": "string",
+      "required": true
+    }
+  }
+}
