@@ -8,7 +8,10 @@ const { messages } = require('elasticio-node');
 const logger = require('@elastic.io/component-logger')();
 const action = require('../lib/actions/storeObjects');
 
-const cfg = {};
+const cfg = {
+  resourceServerUrl: 'http://example.com',
+  apiKeyHeaderValue: 'token',
+};
 
 const msg = {
   body: {
