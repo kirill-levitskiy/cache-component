@@ -10,6 +10,7 @@ const action = require('../lib/actions/storeObjects');
 
 const cfg = {
   resourceServerUrl: 'http://maester-service.platform.svc.cluster.local:3002',
+  apiKeyHeaderName: 'Authorization',
   apiKeyHeaderValue: 'token',
 };
 
@@ -47,6 +48,16 @@ describe('store objects', () => {
   });
 
   it('store object', async () => {
+    nock('http://maester-service.platform.svc.cluster.local:3002')
+      .post('/buckets/', { objects: [] }).reply(201, {
+        statusCode: 201,
+        body: {
+          id: '5e7bbaa4304d6c00150a5aa1',
+          objects: [],
+          closed: false,
+          createdAt: 1585167012881,
+        },
+      });
     nock('http://maester-service.platform.svc.cluster.local:3002')
       .post('/objects/', msg.body).reply(200, msg.body);
     await action.process.call(self, msg, cfg);

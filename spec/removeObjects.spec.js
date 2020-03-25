@@ -10,6 +10,7 @@ const action = require('../lib/actions/removeObjects');
 
 const cfg = {
   resourceServerUrl: 'http://maester-service.platform.svc.cluster.local:3002',
+  apiKeyHeaderName: 'Authorization',
   apiKeyHeaderValue: 'token',
 };
 
