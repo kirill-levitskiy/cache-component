@@ -73,7 +73,7 @@
       "metadata": {
         "in": "./lib/schemas/remove.in.json"
       }
-    }
+    },
     "RemoveKeyValueBatch": {
       "main": "./lib/actions/removeBuckets.js",
       "title": "Delete Key:Value pair",
