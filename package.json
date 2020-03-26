@@ -19,9 +19,7 @@
     "dependencies": {
         "elasticio-node": "0.0.9",
         "@elastic.io/component-commons-library": "1.1.0",
-        "elasticio-sailor-nodejs": "2.6.5",
-        "remove-trailing-slash": "0.1.0",
-        "remove-leading-slash": "1.0.1"
+        "elasticio-sailor-nodejs": "2.6.5"
     },
     "devDependencies": {
         "@elastic.io/component-logger": "0.0.1",
