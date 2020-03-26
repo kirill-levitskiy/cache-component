@@ -4,7 +4,7 @@
   "docsUrl": "",
   "actions": {
     "StoreKeyValue": {
-      "main": "./lib/actions/store.js",
+      "main": "./lib/actions/storeObjects.js",
       "title": "Upsert Key:Value pair",
       "description": "Insert new or update existing Key:Value pair",
       "fields": {
@@ -17,7 +17,7 @@
       }
     },
     "StoreKeyValueBatch": {
-      "main": "./lib/actions/storeBatch.js",
+      "main": "./lib/actions/storeBuckets.js",
       "title": "Upsert Key:Value pair Batch",
       "description": "Insert new or replace existing Key:Value pair from Batch",
       "fields": {
@@ -31,7 +31,7 @@
       }
     },
     "RetrieveKeyValue": {
-      "main": "./lib/actions/retrieve.js",
+      "main": "./lib/actions/retrieveObjects.js",
       "title": "Lookup Key:Value pair",
       "description": "Retrieve existing Key:Value pair by Key",
       "fields": {
@@ -46,7 +46,7 @@
       }
     },
     "RetrieveKeyValueBatch": {
-      "main": "./lib/actions/retrieveBatch.js",
+      "main": "./lib/actions/retrieveBuckets.js",
       "title": "Lookup Key:Value pair Batch",
       "description": "Retrieve existing Key:Value pair by Key Batch",
       "fields": {
@@ -61,9 +61,23 @@
       }
     },
     "RemoveKeyValue": {
-      "main": "./lib/actions/remove.js",
+      "main": "./lib/actions/removeObjects.js",
       "title": "Delete Key:Value pair",
       "description": "Remove existing Key:Value pair by Key",
+      "fields": {
+        "allValues": {
+          "viewClass": "CheckBoxView",
+          "label": "Delete all values for this key"
+        }
+      },
+      "metadata": {
+        "in": "./lib/schemas/remove.in.json"
+      }
+    }
+    "RemoveKeyValueBatch": {
+      "main": "./lib/actions/removeBuckets.js",
+      "title": "Delete Key:Value pair",
+      "description": "Remove existing Key:Value pair by Key Batch",
       "fields": {
         "allValues": {
           "viewClass": "CheckBoxView",
