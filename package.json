@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "elastic.io component for the key:value data storing using Maester",
     "scripts": {
-        "pretest": "eslint lib spec",
+        "pretest": "eslint lib spec"
     },
     "repository": {
         "type": "git",
