@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-expressions */
 
-const fs = require('fs');
 const { expect } = require('chai');
 const sinon = require('sinon');
 const nock = require('nock');
@@ -29,10 +28,8 @@ describe('retrieve objects', () => {
   });
 
   before(async () => {
-    if (fs.existsSync('.env')) {
-      // eslint-disable-next-line global-require
-      require('dotenv').config();
-    }
+    process.env.ELASTICIO_OBJECT_STORAGE_URI = 'http://maester-service.platform.svc.cluster.local:3002';
+    process.env.ELASTICIO_OBJECT_STORAGE_TOKEN = 'token';
 
     lastCall = sinon.stub(messages, 'newMessageWithBody')
       .returns(Promise.resolve());
