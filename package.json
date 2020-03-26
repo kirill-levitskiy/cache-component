@@ -4,7 +4,7 @@
     "description": "elastic.io component for the key:value data storing using Maester",
     "scripts": {
         "pretest": "eslint lib spec",
-        "test": "mocha %NODE_DEBUG_OPTION% spec/storeObjects.spec.js --timeout 10000"
+        "test": "mocha %NODE_DEBUG_OPTION% spec/*.spec.js --timeout 10000"
     },
     "repository": {
         "type": "git",
