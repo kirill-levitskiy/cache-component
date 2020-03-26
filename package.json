@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "elastic.io component for the key:value data storing using Maester",
     "scripts": {
-        "test": "mocha %NODE_DEBUG_OPTION% spec/*.spec.js --timeout 10000",
         "pretest": "eslint lib spec"
     },
     "repository": {

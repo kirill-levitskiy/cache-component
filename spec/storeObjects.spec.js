@@ -10,8 +10,8 @@ const action = require('../lib/actions/storeObjects');
 
 const cfg = {
   resourceServerUrl: 'http://maester-service.platform.svc.cluster.local:3002',
-  apiKeyHeaderName: 'auth',
-  apiKeyHeaderValue: 'token',
+  apiKeyHeaderName: 'Authorization',
+  apiKeyHeaderValue: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRJZCI6IjU2YzIwN2FkYjkxMjExODFlNjUwYzBlZiIsImNvbnRyYWN0SWQiOiI1YzIyMGQ3YTIxMzI0MDAwMTI0YzljYjgiLCJ3b3Jrc3BhY2VJZCI6IjVjMjIwZDdhMjEzMjQwMDAxMjRjOWNiYSIsImZsb3dJZCI6IjVlN2NjMmQ4OTkwMTI0MDAxNTQzOWUyNSIsInVzZXJJZCI6IjVjMjIwZDdhMjEzMjQwMDAxMjRjOWNiNyIsImlhdCI6MTU4NTIzNDY0OX0.B0C8kt5DL7U-FgvJWTbD0MlpH_6zLeWu3EA1RW8svN4',
 };
 
 const msg = {
