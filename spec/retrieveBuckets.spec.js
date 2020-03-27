@@ -7,11 +7,7 @@ const { messages } = require('elasticio-node');
 const logger = require('@elastic.io/component-logger')();
 const action = require('../lib/actions/retrieveBuckets');
 
-const cfg = {
-  resourceServerUrl: 'http://maester-service.platform.svc.cluster.local:3002',
-  apiKeyHeaderName: 'Authorization',
-  apiKeyHeaderValue: 'token',
-};
+const cfg = {};
 
 const msg = [];
 
