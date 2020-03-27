@@ -52,7 +52,7 @@ describe('store objects', () => {
         },
       });
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .post('/objects/', msg.body).reply(200, msg.body);
+      .post('/objects', msg.body).reply(200, msg.body);
     await action.process.call(self, msg, cfg);
     expect(self.emit.calledOnce).to.be.true;
   });
