@@ -11,7 +11,7 @@ const cfg = {};
 
 const msg = {
   body: {
-    key: '1',
+    key: '4b7acb72-4c9b-4206-841a-22f919c5b352',
   },
 };
 
@@ -41,7 +41,7 @@ describe('retrieve objects', () => {
 
   it('retrieve object', async () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .get('/objects/1').reply(200, msg.body);
+      .get(`/objects/${msg.body.key}`).reply(200);
     await action.process.call(self, msg, cfg);
     expect(self.emit.calledOnce).to.be.true;
   });
