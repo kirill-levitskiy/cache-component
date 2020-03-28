@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "contentLength": {
+      "type": "number"
+    },
+    "contentType": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "number"
+    },
+    "md5": {
+      "type": "string"
+    },
+    "objectId": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "bucket": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

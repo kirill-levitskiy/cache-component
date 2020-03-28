@@ -10,10 +10,12 @@
       "fields": {
         "updateIfExists": {
           "viewClass": "CheckBoxView",
-          "label": "Update if exists"}
+          "label": "Update if exists"
+        }
       },
       "metadata": {
-        "in": "./lib/schemas/store.in.json"
+        "in": "./lib/schemas/store.in.json",
+        "out": "./lib/schemas/store.out.json"
       }
     },
     "StoreKeyValueBatch": {
