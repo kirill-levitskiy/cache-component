@@ -1,10 +1,10 @@
 {
-    "type": "object",
-    "properties": {
-      "key": {
-        "name": "Key",
-        "type": "string",
-        "required": true
-      }
+  "type": "object",
+  "properties": {
+    "bucketId": {
+      "name": "Bucket ID",
+      "type": "string",
+      "required": false
     }
+  }
 }

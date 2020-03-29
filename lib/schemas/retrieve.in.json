@@ -1,15 +1,15 @@
 {
-    "type": "object",
-    "properties": {
-      "keyBucket": {
-        "name": "Bucket Key",
-        "type": "string",
-        "required": false
-      },
-      "key": {
-        "name": "Key",
-        "type": "string",
-        "required": true
-      }
+  "type": "object",
+  "properties": {
+    "objectId": {
+      "name": "Object ID",
+      "type": "string",
+      "required": false
+    },
+    "key": {
+      "name": "Key",
+      "type": "string",
+      "required": false
     }
+  }
 }

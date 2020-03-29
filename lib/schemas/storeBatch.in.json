@@ -1,28 +1,28 @@
 {
-    "type": "object",
-    "properties": {
-      "key": {
-        "name": "Key",
-        "type": "string",
-        "required": false
-      },
-      "keyValArray": {
-        "name": "Value Array",
-        "type": "array",
-        "required": true,
-        "items" : {
-          "type": "object",
-          "properties": {
-            "keyValue": {
-              "type": "string",
-              "required": true
-            },
-            "value": {
-              "type": "string",
-              "required": true
-            }
+  "type": "object",
+  "properties": {
+    "key": {
+      "name": "Key",
+      "type": "string",
+      "required": false
+    },
+    "keyValArray": {
+      "name": "Value Array",
+      "type": "array",
+      "required": true,
+      "items" : {
+        "type": "object",
+        "properties": {
+          "keyValue": {
+            "type": "string",
+            "required": true
+          },
+          "value": {
+            "type": "string",
+            "required": true
           }
         }
       }
     }
+  }
 }
