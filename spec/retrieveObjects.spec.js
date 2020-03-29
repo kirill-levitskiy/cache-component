@@ -10,7 +10,7 @@ const cfg = {};
 
 const msg = {
   body: {
-    key: '4b7acb72-4c9b-4206-841a-22f919c5b352',
+    key: 'key1',
   },
 };
 
@@ -31,6 +31,6 @@ describe('retrieve objects', () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
       .get(`/objects/${msg.body.key}`).reply(200);
     result = await action.process.call(self, msg, cfg);
-    expect(result).to.have.all.keys('id', 'body', 'attachments', 'headers', 'metadata');
+    expect(result).to.have.all.keys('body');
   });
 });

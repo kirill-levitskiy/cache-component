@@ -8,7 +8,11 @@ const action = require('../lib/actions/retrieveBuckets');
 
 const cfg = {};
 
-const msg = [];
+const msg = {
+  body: {
+    bucketId: '5e7fc461fefbf30013afdc8e',
+  },
+};
 
 const self = {
   emit: sinon.spy(),
@@ -25,8 +29,8 @@ describe('retrieve buckets', () => {
 
   it('retrieve array', async () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .get('/buckets/').reply(200, msg.body);
+      .get(`/buckets/${msg.body.bucketId}`).reply(200, msg.body);
     result = await action.process.call(self, msg, cfg);
-    expect(result).to.have.all.keys('id', 'body', 'attachments', 'headers', 'metadata');
+    expect(result).to.have.all.keys('body');
   });
 });

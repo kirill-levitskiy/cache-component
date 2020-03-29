@@ -34,6 +34,6 @@ describe('store buckets', () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
       .post('/buckets/', msg.body).reply(200, msg.body);
     result = await action.process.call(self, msg, cfg);
-    expect(result).to.have.all.keys('id', 'body', 'attachments', 'headers', 'metadata');
+    expect(result).to.have.all.keys('body');
   });
 });

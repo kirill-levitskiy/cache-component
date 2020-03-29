@@ -1,8 +1,13 @@
 {
   "type": "object",
   "properties": {
-    "keyBucket": {
-      "name": "Bucket Key",
+    "bucketId": {
+      "name": "Bucket ID",
+      "type": "string",
+      "required": false
+    },
+    "objectId": {
+      "name": "Object ID",
       "type": "string",
       "required": false
     },
