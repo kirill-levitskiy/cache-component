@@ -10,7 +10,7 @@ const cfg = {};
 
 const msg = {
   body: {
-    key: '1',
+    bucketId: '5e7fc461fefbf30013afdc8e',
   },
 };
 
@@ -29,8 +29,8 @@ describe('remove buckets', () => {
 
   it('remove bucket', async () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .delete(`/buckets/${msg.body.key}`).reply(200, msg.body);
+      .delete(`/buckets/${msg.body.bucketId}`).reply(200, msg.body);
     result = await action.process.call(self, msg, cfg);
-    expect(result.body).to.have.all.keys('key');
+    expect(result.body).to.have.all.keys('bucketId');
   });
 });

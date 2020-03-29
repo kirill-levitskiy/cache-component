@@ -8,10 +8,6 @@
       "title": "Upsert Key:Value pair",
       "description": "Insert new or update existing Key:Value pair",
       "fields": {
-        "updateIfExists": {
-          "viewClass": "CheckBoxView",
-          "label": "Update if exists"
-        }
       },
       "metadata": {
         "in": "./lib/schemas/store.in.json",
@@ -23,10 +19,6 @@
       "title": "Upsert Key:Value pair Batch",
       "description": "Insert new or replace existing Key:Value pair from Batch",
       "fields": {
-        "updateIfExists": {
-          "viewClass": "CheckBoxView",
-          "label": "Update if exists"
-        }
       },
       "metadata": {
         "in": "./lib/schemas/storeBatch.in.json"
@@ -37,9 +29,9 @@
       "title": "Lookup Key:Value pair",
       "description": "Retrieve existing Key:Value pair by Key",
       "fields": {
-        "default": {
-          "viewClass": "TextFieldView",
-          "label": "Default value if key was not found",
+        "deleteRequired": {
+          "viewClass": "CheckBoxView",
+          "label": "Remove object after successful reading",
           "required": false
         }
       },

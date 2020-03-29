@@ -41,6 +41,8 @@ describe('retrieve objects', () => {
       });
     nock('http://maester-service.platform.svc.cluster.local:3002')
       .get('/objects/9fda5050-7760-4fb5-b36b-37502fe546d7').reply(200, { key: 'status' });
+    nock('http://maester-service.platform.svc.cluster.local:3002')
+      .delete('/objects/9fda5050-7760-4fb5-b36b-37502fe546d7').reply(200);
 
     result = await action.process.call(self, msg, cfg);
     expect(result).to.have.all.keys('body');

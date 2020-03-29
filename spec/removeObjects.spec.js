@@ -10,7 +10,7 @@ const cfg = {};
 
 const msg = {
   body: {
-    key: '1',
+    objectId: '9fda5050-7760-4fb5-b36b-37502fe546d7',
   },
 };
 
@@ -29,8 +29,8 @@ describe('remove objects', () => {
 
   it('remove object', async () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .delete(`/objects/${msg.body.key}`).reply(200, msg.body);
+      .delete(`/objects/${msg.body.objectId}`).reply(200, msg.body);
     result = await action.process.call(self, msg, cfg);
-    expect(result.body).to.have.all.keys('key');
+    expect(result.body).to.have.all.keys('objectId');
   });
 });
