@@ -5,6 +5,11 @@
       "name": "Bucket ID",
       "type": "string",
       "required": false
+    },
+    "external_id": {
+      "name": "External ID",
+      "type": "string",
+      "required": false
     }
   }
 }

@@ -4,7 +4,7 @@
     "key": {
       "name": "Key",
       "type": "string",
-      "required": false
+      "required": true
     },
     "keyValArray": {
       "name": "Value Array",
@@ -23,6 +23,11 @@
           }
         }
       }
+    },
+    "externalId": {
+      "name": "External ID",
+      "type": "string",
+      "required": false
     }
   }
 }
