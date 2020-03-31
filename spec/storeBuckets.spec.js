@@ -8,14 +8,13 @@ const action = require('../lib/actions/storeBuckets');
 
 const cfg = {};
 
-const msg = [
-  {
-    body: {
-      key: 'status',
-      value: 'Pending',
-    },
+const msg = {
+  body: {
+    key: 'status',
+    value: 'Pending',
+    externalId: '',
   },
-];
+};
 
 const self = {
   emit: sinon.spy(),
