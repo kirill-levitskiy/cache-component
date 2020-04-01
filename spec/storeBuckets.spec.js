@@ -10,9 +10,7 @@ const cfg = {};
 
 const msg = {
   body: {
-    key: 'status',
-    value: 'Pending',
-    externalId: '',
+    externalId: 'test',
   },
 };
 
@@ -29,9 +27,15 @@ describe('store buckets', () => {
     process.env.ELASTICIO_OBJECT_STORAGE_TOKEN = 'token';
   });
 
-  it('store array', async () => {
+  it('store bucket', async () => {
     nock('http://maester-service.platform.svc.cluster.local:3002')
-      .post('/buckets/', msg.body).reply(200, msg.body);
+      .post('/buckets/', {
+        objects: [],
+        externalId: 'test',
+      }).reply(201, {
+        objects: [],
+        externalId: 'test',
+      });
     result = await action.process.call(self, msg, cfg);
     expect(result).to.have.all.keys('body');
   });
