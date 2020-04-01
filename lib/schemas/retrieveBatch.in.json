@@ -6,7 +6,7 @@
       "type": "string",
       "required": false
     },
-    "external_id": {
+    "externalId": {
       "name": "External ID",
       "type": "string",
       "required": false
